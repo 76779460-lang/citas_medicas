@@ -11,49 +11,37 @@
 // ============================================================
 
 import 'package:flutter/material.dart';
-import '../models/cita.dart';
+
+class Cita {
+  final String nombre;
+  final String motivo;
+  String estado;
+
+  Cita({required this.nombre, required this.motivo, this.estado = 'Pendiente'});
+}
 
 class CitasProvider extends ChangeNotifier {
-  final List<Cita> _citas = [
-    Cita(
-      id: '1',
-      paciente: 'Juan Pérez',
-      especialidad: 'Odontología',
-      profesional: 'Dr. Ramírez',
-      fechaHora: DateTime(2026, 6, 20, 10, 0),
-      motivo: 'Limpieza dental',
-      estado: 'Programada',
-    ),
-    Cita(
-      id: '2',
-      paciente: 'María López',
-      especialidad: 'Medicina General',
-      profesional: 'Dra. Soto',
-      fechaHora: DateTime(2026, 6, 18, 9, 30),
-      motivo: 'Control de rutina',
-      estado: 'Atendida',
-    ),
-  ];
+  final List<Cita> _citas = [];
+  
+  List<Cita> get citas => _citas;
 
-  List<Cita> get citas => List.unmodifiable(_citas);
-
-  void agregarCita(Cita cita) {
-    _citas.add(cita);
+  void agregarCita(String nombre, String motivo) {
+    _citas.add(Cita(nombre: nombre, motivo: motivo));
     notifyListeners();
   }
 
-  void cambiarEstado(String id, String nuevoEstado) {
-    final index = _citas.indexWhere((c) => c.id == id);
-    if (index != -1) {
-      _citas[index] = _citas[index].copyWith(estado: nuevoEstado);
-      notifyListeners();
-    }
-  }
-
-  void eliminarCita(String id) {
-    _citas.removeWhere((c) => c.id == id);
+  void eliminarCita(int index) {
+    _citas.removeAt(index);
     notifyListeners();
   }
 
-  String generarId() => DateTime.now().millisecondsSinceEpoch.toString();
+  void insertarCita(int index, Cita cita) {
+    _citas.insert(index, cita);
+    notifyListeners();
+  }
+
+  void cambiarEstado(int index, String nuevoEstado) {
+    _citas[index].estado = nuevoEstado;
+    notifyListeners();
+  }
 }

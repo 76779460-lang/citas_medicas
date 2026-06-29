@@ -35,30 +35,47 @@ class InicioPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final totalCitas = context.watch<CitasProvider>().citas.length;
-
     return Scaffold(
-      appBar: AppBar(title: const Text("Citas Médicas"), centerTitle: true),
+      appBar: AppBar(
+        title: const Text("Citas Médicas"), 
+        centerTitle: true,
+      ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text('Total citas: $totalCitas'),
-            const SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () => Navigator.push(
-                context, 
-                MaterialPageRoute(builder: (_) => const RegistroCitaPage())
+            // Aquí cargamos tu imagen desde la carpeta assets
+            Image.asset(
+              'assets/cruz_medica.png', 
+              width: 150, 
+              height: 150,
+            ),
+            const SizedBox(height: 40),
+            
+            // Botón para registrar cita
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context, 
+                  MaterialPageRoute(builder: (_) => const RegistroCitaPage())
+                ),
+                child: const Text('Registrar Cita'),
               ),
-              child: const Text('Registrar Cita'),
             ),
             const SizedBox(height: 15),
-            ElevatedButton(
-              onPressed: () => Navigator.push(
-                context, 
-                MaterialPageRoute(builder: (_) => const ListasCitasPage())
+            
+            // Botón para ver citas
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () => Navigator.push(
+                  context, 
+                  MaterialPageRoute(builder: (_) => const ListasCitasPage())
+                ),
+                child: const Text('Ver Citas'),
               ),
-              child: const Text('Ver Citas'),
             ),
           ],
         ),
