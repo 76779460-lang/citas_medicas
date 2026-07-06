@@ -2,6 +2,14 @@
 
 A new Flutter project.
 
+
+Ashley saldarriaga 
+## 🚀 Mejoras Recientes
+- **Sistema de Gestión de Citas**: Ahora se pueden marcar como 'Pendiente', 'Atendida' o 'Reprogramada'.
+- **Interacción Mejorada**: Menú contextual (PopupMenuButton) para cambios rápidos de estado.
+- **Gestión de Errores**: Función 'Deshacer' (Undo) integrada al eliminar citas mediante SnackBar.
+- **UI Profesional**: Implementación de Cards y feedback visual para el estado de las citas.
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
@@ -18,3 +26,4 @@ samples, guidance on mobile development, and a full API reference.
 Proyecto SmartCitas
 Integrante: Kevin Bray Barreto Flores.
 Integrante: Robert Jampier
+Integrante: Ashley Saldarriaga

@@ -12,7 +12,7 @@
 class Cita {
   final String id;
   final String paciente;
-  final String especialidad; // Cambiado a español
+  final String especialidad; 
   final String profesional;
   final DateTime fechaHora;
   final String motivo;
