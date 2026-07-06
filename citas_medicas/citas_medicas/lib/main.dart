@@ -45,13 +45,25 @@ class InicioPage extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            // Aquí cargamos tu imagen desde la carpeta assets
+            // Imagen de la cruz
             Image.asset(
               'assets/cruz_medica.png', 
               width: 150, 
               height: 150,
             ),
-            const SizedBox(height: 40),
+            const SizedBox(height: 10),
+            
+            // Nombre de la empresa
+            const Text(
+              'SmartClinic Salud Integral',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Color(0xFF1565C0),
+              ),
+            ),
+            const SizedBox(height: 30),
             
             // Botón para registrar cita
             SizedBox(
