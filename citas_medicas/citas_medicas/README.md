@@ -3,6 +3,38 @@
 A new Flutter project.
 
 
+# Repositorio GitHub:
+https://github.com/lLove-u/citas_medicas    
+ INTEGRANTES DEL GRUPO: 
+Robert Jampier Anastacio Coveñas
+Luis Adrian Caballero Romero
+Kevin Bray Barreto Flores
+Ariel Matías verá Ramos
+Ashley Saldarriaga Escobedo                                                     
+   Integrantes: 
+fixsmart23k-hue - Kevin Barreto Flores
+lLove-u - Ariel Matías verá Ramos
+76779460-LANG - Ashley Saldarriaga Escobedo
+Pier11- Robert Anastacio Coveñas
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 Ashley saldarriaga 
 ## 🚀 Mejoras Recientes
 - **Sistema de Gestión de Citas**: Ahora se pueden marcar como 'Pendiente', 'Atendida' o 'Reprogramada'.
